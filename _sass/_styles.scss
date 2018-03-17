@@ -1,0 +1,114 @@
+html {
+    font-size: 18px;
+    background-color: $white;
+    body {
+        overflow-x: hidden;  
+        font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+        h1,h2,h3,h4,h5,h6 {
+            font-weight:bold;
+        }
+        .wrapper {  
+            padding-left: 20rem;
+        }
+        
+        .sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 20rem;
+            width: 20rem;
+            min-height: 100%;
+            margin-left: -20rem;
+            overflow-y: auto;
+            padding:1.5rem;
+            background: $secondary;
+            color: $primary;
+            a {
+                color: $white;
+            }           
+            h1 {
+                font-size:2.8rem;
+                line-height:3.1rem;
+            }
+            p {
+                font-size:1.3rem;
+                line-height:1.7rem;
+                text-align:left;
+                margin:0;
+                margin-top:0.5rem;
+                &.copyright {
+                    font-size:1.1rem;
+                }
+            }
+            ul{
+                margin-top:1rem;
+                padding-left:1rem;
+                li {
+                    font-size:1.1rem;
+                }
+            }
+        }
+        
+        .content-wrapper {
+            width: 60rem;
+            position: absolute;
+            padding: 1rem;
+            margin-right: -20rem;
+            color: $text;
+            padding-top:2rem;
+            a {
+                color: $links;
+                span {
+                    color: $primary;
+                }
+            }
+            h2 {
+                margin-top:1rem;
+                margin-bottom:1.5rem;
+                font-size: 2rem;
+                text-decoration:underline;
+            }
+            h3 {
+                margin-top:1rem;
+                margin-bottom:1.5rem;
+                font-size:1.4rem;
+                text-decoration:underline;
+            }
+            h4 {
+                font-size:1.1rem;
+                margin-bottom:0;
+                margin-top:0.8rem;
+                line-height:1.1rem;
+                a{
+                    text-decoration:none;
+                    span {
+                        font-weight:normal;
+                    }
+                    &:focus {                        
+                        span {
+                            text-decoration:underline;
+                        }
+                    }
+                    &:hover {
+                        span {
+                            text-decoration:underline;
+                        }
+                    }
+                    &:active {
+                        color: $accent;
+                        span {
+                            text-decoration:underline;
+                        }
+                    }
+                }
+            }
+            .post-date {
+                font-size: 0.8rem;
+                line-height:0.8rem;
+                font-style: italic;
+                margin-bottom:1rem;
+                display:inline-block;
+                
+            }
+        }
+    }
+}

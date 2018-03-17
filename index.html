@@ -1,0 +1,53 @@
+--- layout: default title: Home ---
+<h2>Welcome!</h2>
+<p>
+  Welcome to the BitShares Committee news and updates page.
+</p>
+<p>
+  This is a work in progress, aiming to be the hub of all Committee related information.
+  <br/> For the time being it will contain information about Committee proposals, voting reports and announcements.
+</p>
+<p>
+  More importantly, this page enables web push notifications so please ACCEPT and ALLOW notifications from this site if you
+  want to be kept up-to-date about Committee matters.
+</p>
+<p>
+  Please bear with us while we fill the site with archived content and
+  <strong>don't forget to vote!</strong>
+</p>
+<hr/>
+<h3>Latest Updates</h3>
+{% for post in paginator.posts %}
+<h4 class="post-title">
+  <a href="{{ post.url }}"> 
+    {% assign title = post.title | split: '|' %} {{ title[0] }}
+    <span>{{ title[1] }}</span>
+  </a>
+</h4>
+<span class="post-date">Posted: {{ post.date | date_to_string }}</span>
+{% endfor %}
+<nav aria-label="pagination" class="paging">
+  <ul class="pagination pagination-md">
+    {% if paginator.next_page %}
+    <li class="page-item ">
+      <a class="page-link" href="/{{ paginator.next_page }}" tabindex="-1">Older</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="/{{ paginator.next_page }}" tabindex="-1">Older</a>
+    </li>
+    {% endif %} {% if paginator.previous_page %} {% if paginator.page == 2 %}
+    <li class="page-item">
+      <a class="page-link" href="/">Next</a>
+    </li>
+    {% else %}
+    <li class="page-item">
+      <a class="page-link" href="/{{ paginator.previous_page }}">Next</a>
+    </li>
+    {% endif %} {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#">Next</a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
