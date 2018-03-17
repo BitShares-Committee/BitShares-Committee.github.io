@@ -35,9 +35,7 @@ As of today, the actual fees for most transaction types are:
 | asset_create (5+ chars)                   |            289.50000 BTS |          50.0000 USD |
 | worker_create                             |            289.50000 BTS |          50.0000 USD |
 
-*For sake of simplicity, the above table is truncated to the most
-popular operations. The full list can be found in the wallet-internal
-explorer*
+*For sake of simplicity, the above table is truncated to the most popular operations. The full list can be found in the wallet-internal explorer*
 
 **Remark**: Also remark, that *Lifetime Members* get a 80% cashback on
 their transactions fees according to the [Referral Program](https://bitshares.org/referral-program/).

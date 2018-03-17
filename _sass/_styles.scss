@@ -2,7 +2,6 @@ html {
     font-size: 18px;
     background-color: $white;
     body {
-        overflow-x: hidden;  
         font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
         h1,h2,h3,h4,h5,h6 {
             font-weight:bold;
@@ -21,7 +20,8 @@ html {
             overflow-y: auto;
             padding:1.5rem;
             background: $secondary;
-            color: $primary;
+            color: $primary;            
+            overflow-x: hidden;  
             a {
                 color: $white;
             }           
@@ -49,16 +49,24 @@ html {
         }
         
         .content-wrapper {
-            width: 60rem;
+            max-width: 60rem;
             position: absolute;
             padding: 1rem;
-            margin-right: -20rem;
+            margin-right: 0rem;
             color: $text;
             padding-top:2rem;
             a {
                 color: $links;
                 span {
                     color: $primary;
+                }
+            }
+            p{
+                a{
+                    font-weight:bold;
+                   &:hover{
+                       text-decoration:underline;
+                   }
                 }
             }
             h2 {
@@ -94,7 +102,6 @@ html {
                         }
                     }
                     &:active {
-                        color: $accent;
                         span {
                             text-decoration:underline;
                         }
@@ -106,8 +113,100 @@ html {
                 line-height:0.8rem;
                 font-style: italic;
                 margin-bottom:1rem;
-                display:inline-block;
-                
+                display:inline-block;                
+            }
+            .pagemark {
+                margin-top:0.5rem;
+                margin-bottom:0.5rem;
+                font-style: italic;
+                font-size: 0.9rem;
+                text-align:center;
+            }
+            .paging {
+                margin-top:2rem;
+                .page-item {
+                    a {
+                        padding-left: 3rem;
+                        padding-right:3rem;                    
+                    }
+                }
+            }
+            .markdown {
+                text-align:justify;
+                .post-title {
+                    text-decoration:none;
+                    color: $secondary;
+                    span {
+                        color:$text;                        
+                    }
+                    margin-bottom:0;
+                }
+                .post-date{
+                    color:$primary;
+                    font-weight:bold;
+                    font-size:1rem;
+                    display:inline-block;
+                    margin-bottom:1.5rem;
+                }
+dl {
+    padding: 0; }
+    dl dt {
+      font-size: 14px;
+      font-weight: bold;
+      font-style: italic;
+      padding: 0;
+      margin: 15px 0 5px; }
+      dl dt:first-child {
+        padding: 0; }
+      dl dt > :first-child {
+        margin-top: 0; }
+      dl dt > :last-child {
+        margin-bottom: 0; }
+    dl dd {
+      margin: 0 0 15px;
+      padding: 0 15px; }
+      dl dd > :first-child {
+        margin-top: 0; }
+      dl dd > :last-child {
+        margin-bottom: 0; }
+  
+  blockquote {
+    border-left: 4px solid #dddddd;
+    padding: 0 15px;
+    color: #777777; }
+    blockquote > :first-child {
+      margin-top: 0; }
+    blockquote > :last-child {
+      margin-bottom: 0; }
+  
+  table {
+      width:100%;
+    padding: 0;
+margin-top:0.5rem;
+margin-bottom:0.5rem;
+ }
+    table tr {
+      border-top: 1px solid #cccccc;
+      background-color: white;
+      margin: 0;
+      padding: 0; }
+      table tr:nth-child(2n) {
+        background-color: #f8f8f8; }
+      table tr th {
+        font-weight: bold;
+        border: 1px solid #cccccc;
+        text-align: left;
+        margin: 0;
+        padding: 6px 13px; }
+      table tr td {
+        border: 1px solid #cccccc;
+        text-align: left;
+        margin: 0;
+        padding: 6px 13px; }
+      table tr th :first-child, table tr td :first-child {
+        margin-top: 0; }
+      table tr th :last-child, table tr td :last-child {
+        margin-bottom: 0; }
             }
         }
     }
