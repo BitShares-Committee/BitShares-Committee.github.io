@@ -3,7 +3,7 @@ layout: post
 title: "[Update]|Blockchain fees increased"
 --- 
 
-As of Friday, March 16th 2018, the transaction fees on BitShares have
+As of Saturday, March 17th 2018, the transaction fees on BitShares have
 been increased by the BitShares Committee.
 
 Due to the decrease of the unit price of BTS on all major exchanges, an increase 
@@ -21,19 +21,19 @@ As of today, the actual fees for most transaction types are:
 
 | Operation                                 |                      Fee |  USD equivalent (2018/03/15)|
 | ----------------------------------------- | ------------------------:| --------------------:|
-| transfer                                  |              0.10420 BTS |           0.0180 USD |
+| transfer                                  |              0.10420 BTS |           0.0189 USD |
 | limit_order_create                        |              0.00578 BTS |           0.0010 USD |
 | limit_order_cancel                        |              0.00057 BTS |           0.0001 USD |
 | call_order_update                         |              0.00578 BTS |           0.0010 USD |
-| account_create                            |              0.57900 BTS |           0.1000 USD |
-| account_create                            |             28.95000 BTS |           5.0000 USD |
+| account_create                            |              0.57900 BTS |           0.1050 USD |
+| account_create                            |             28.95000 BTS |           5.2485 USD |
 | account_update                            |              0.00578 BTS |           0.0010 USD |
-| account_upgrade                           |            695.00000 BTS |         120.0000 USD |
-| account_transfer                          |             28.95000 BTS |           5.0000 USD |
-| asset_create (3 chars)                    |         46,313.00000 BTS |       8,000.0000 USD |
-| asset_create (4 chars)                    |         11,578.00000 BTS |       2,000.0000 USD |
-| asset_create (5+ chars)                   |            289.50000 BTS |          50.0000 USD |
-| worker_create                             |            289.50000 BTS |          50.0000 USD |
+| account_upgrade                           |            695.00000 BTS |         125.9651 USD |
+| account_transfer                          |             28.95000 BTS |           5.2485 USD |
+| asset_create (3 chars)                    |         46,313.00000 BTS |       8,397.6759 USD |
+| asset_create (4 chars)                    |         11,578.00000 BTS |       2,099.4190 USD |
+| asset_create (5+ chars)                   |            289.50000 BTS |          52.4855 USD |
+| worker_create                             |            289.50000 BTS |          52.4855 USD |
 
 *For sake of simplicity, the above table is truncated to the most popular operations. The full list can be found in the wallet-internal explorer*
 
