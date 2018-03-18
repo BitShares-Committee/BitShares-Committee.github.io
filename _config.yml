@@ -16,7 +16,7 @@ author:
   name:           'BitShares Committee'
   url:            https://github.com/bitshares-commitee
 
-paginate:         6
+paginate:         10
 
 # Custom vars
 version:          2.1.0
