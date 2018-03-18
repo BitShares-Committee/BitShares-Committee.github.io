@@ -9,9 +9,9 @@ Due to the latest fees adjustment proposed and approved by the committee which w
 
 As it stands now, there is a table of somewhat agreed upon fees in USD terms. 
 
-The drop in BTS valuation is what led to the latest fee adjustment by the committee as fees had to be 627% in BTS terms to reach the same USD values.
+The drop in BTS valuation is what led to the latest fee adjustment by the Committee as fees had to be 627% in BTS terms to reach the same USD values.
 
-The new fee proposal is here: http://cryptofresh.com/p/1.10.8736  and should activate Saturday, March 17th.
+The new fee proposal is here: [http://cryptofresh.com/p/1.10.8736](http://cryptofresh.com/p/1.10.8736) (link active until voted-in) and should activate Saturday, March 17th.
 
 Please join the [forums](http://www.bitsharestalk.org) and vote on how often the committee should adjust BTS fees to match USD values. Please also comment if you believe any fee types' USD values must be changed.
 
