@@ -9,7 +9,7 @@ Following on from his [earlier proposal](https://bitsharestalk.org/index.php?top
 
 He suggests using part of the unspent daily reserve budget to adjust the supply of smartcoins and BTS through a Committee-controlled worker by utilising it in the same manner as the proceeds from fees mentioned above.
 
-We would like to remind you that the 0.1% fee and associated market value management operation was [proposed](/2018/03/09/bitXXX-Market-Fees-Proposal/) and [approved]().
+We would like to remind you that the 0.1% fee and associated market value management operation was [proposed](/2018/03/09/bitXXX-Market-Fees-Proposal/) and [approved](/2018/03/10/market-fees-approved/).
 
 *Please take part in the discussion.*
 
