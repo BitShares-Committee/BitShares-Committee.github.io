@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Proposal]|Increase network fees"
+title: "[Proposal]|Increase blockchain fees"
 ---
 
-A new proposal to bring network fees in line with the agreed-upon USD prices due to changes in BTS valuation.
+A new proposal to bring blockchain fees in line with the agreed-upon USD prices due to changes in BTS valuation.
 
 Update comprises of a 627% increase in BTS value.
 
