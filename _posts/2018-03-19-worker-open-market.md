@@ -11,4 +11,6 @@ The worker is set to receive 200k daily of the currently remaining 240k daily bu
 
 Once the proposal is approved by the Committee and the neccessary review period passes, the worker will be created and be subject to BTS holders' voting approval like any other worker.
 
+You can follow the voting [here](https://cryptofresh.com/p/1.10.8837).
+
 Thank you.
