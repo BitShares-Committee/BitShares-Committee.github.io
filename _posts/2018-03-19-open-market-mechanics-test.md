@@ -9,7 +9,7 @@ If you have followed the [relevant discussion](https://bitsharestalk.org/index.p
 
 In order to test the results of such a worker, the Committee is voting on a proposal to transfer 2m BTS from committee-account to committee-cnytrader (a multisig account of the chinese constituency of the Committee) so a test-run of the mechanics can be perfomed in bitCNY.
 
-You can follow the voting [here](https://cryptofresh.com/p/1.10.8826).
+You can follow the voting [here](https://cryptofresh.com/p/1.10.8836).
 
 In the interests of transparency, those 2m BTS in committee-account are the result of a BitSILVER black-swan event as explained [here](https://bitsharestalk.org/index.php?topic=26072.msg316910#msg316910)
 
