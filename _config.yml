@@ -17,6 +17,7 @@ author:
   url:            https://github.com/bitshares-commitee
 
 paginate:         10
+mpaginate:        10
 t:
   en:
     title:            BitShares Committee
@@ -51,7 +52,7 @@ defaults:
       layout: default
   -
     scope:
-      path: "cn"/page
+      path: "cn/page"
     values:
       lang: "cn"
       layout: default

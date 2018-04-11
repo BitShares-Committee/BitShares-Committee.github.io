@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  {% include header.html %}
+  <body>
+    <div class="wrapper">
+      <div class="sidebar-wrapper d-flex align-content-end flex-column justify-content-end">         
+        {% include sidebar.html %}
+      </div>
+      <div class="content-wrapper">
+        <div class="container-fluid">            
+{{content}}
+<h3>Updates</h3>
+            
+
+{% assign posts_count = site.posts | where: "lang",page.lang | size %}
+
+{% assign mod_pag = posts_count | modulo:site.mpaginate %}
+{% if mod_pag>0 %}
+{% assign pages_count = posts_count | divided_by:site.mpaginate | plus:1 %}
+{%else%}
+{% assign pages_count = posts_count | divided_by:site.mpaginate  %}
+{%endif%}
+{% assign next_pag = page.index | plus:1 %}
+
+{% assign OFFSET = site.mpaginate | times:page.index | minus: site.mpaginate %}
+
+{% assign last_pag = pages_count %}
+
+{% if OFFSET >= posts_count then %}
+   {% assign last_pag = page.index %}
+{% endif %}
+
+{% if page.index == last_pag then %}
+      {% assign next_pag = 'none' %}
+{% endif %}
+
+{% assign filtered_posts = site.posts | where: 'lang',page.lang %}
+
+{% for post in filtered_posts limit:site.mpaginate offset:OFFSET %}
+<h4 class="post-title">
+    <a href="{{ post.url }}"> 
+      {% assign title = post.title | split: '|' %} {{ title[0] }}
+      <span>{{ title[1] }}</span>
+    </a>
+  </h4>
+  <span class="post-date">Posted: {{ post.date | date_to_string }}</span>
+{% endfor %}
+
+<hr/>
+<p class="pagemark">
+Page: {{page.index}}
+</p>
+<hr/>
+
+<nav aria-label="pagination" class="paging d-flex align-content-center justify-content-center">
+    <ul class="pagination pagination-md">
+      {% if page.index>1 %} {% if page.index == 2 %}
+      <li class="page-item">
+        <a class="page-link" href="/{{page.lang}}/">Newer</a>
+      </li>
+      {% else %}
+      <li class="page-item">
+        <a class="page-link" href="/{{ page.lang | downcase }}/page/{{ page.index-1 }}/">Newer</a>
+      </li>
+      {% endif %} {% else %}
+      <!--<li class="page-item disabled">
+        <a class="page-link" href="page{{ paginator.previous_page }}">Newer</a>
+      </li>//-->
+      {% endif %}    
+      {% if page.index == last_pag then %}
+
+      {% else %}
+      
+      <li class="page-item ">
+        <a class="page-link" href="/{{ page.lang | downcase }}/page/{{ next_pag }}/" tabindex="-1">Older</a>
+      </li>
+      
+      {% endif %}
+    </ul>
+  </nav>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

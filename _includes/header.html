@@ -1,10 +1,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="{{ site.title }} - {{ site.tagline }}">
+  <meta name="description" content="{{ site.t[page.lang].title }} - {{ site.t[page.lang].tagline }}">
   <meta name="author" content="{{ site.author.name }}">
   <title>
-    {% if page.title == "Home" %} {{ site.title }} &middot; {{ site.tagline }} {% else %} {{ page.title }} &middot; {{ site.title
+    {% if page.title == "Home" %} {{ site.t[page.lang].title }} &middot; {{ site.t[page.lang].tagline }} {% else %} {{ page.title }} &middot; {{ site.t[page.lang].title
     }} {% endif %}
   </title>
   <!-- Global site tag (gtag.js) - Google Analytics -->

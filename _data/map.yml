@@ -46,3 +46,18 @@
 -
   en: en/_posts/2018-03-21-bbf-domain-worker-announcement.md
   cn: cn/_posts/2018-03-21-bbf-domain-worker-announcement-cn.md
+-
+  en: en/index.html
+  cn: cn/index.html
+-
+  en: en/page/1/index.html
+  cn: cn/page/1/index.html
+-
+  en: en/page/2/index.html
+  cn: cn/page/2/index.html
+-
+  en: en/committee.md
+  cn: cn/committee.md
+-
+  en: en/contact.md
+  cn: cn/contact.md

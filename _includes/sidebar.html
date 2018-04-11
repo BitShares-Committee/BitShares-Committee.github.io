@@ -1,15 +1,16 @@
 <img src="/img/bitshares.png" class="img-fluid" />
 <h1>
   <a href="/">
-    {{ site.title }}
+    {{ site.t[page.lang].title }}
   </a>
 </h1>
-<p>{{ site.description }}</p>
+<p>{{ site.t[page.lang].description }}</p>
 <ul class="list-unstyled">
   <li>
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="/">Home</a>
+    <a class="sidebar-nav-item{% if page.url == "/en/" or page.url=="/cn/" %} active{% endif %}" href="/{{page.lang}}">Home</a>
+    
   </li>
-  {% assign pages_list = site.pages %}
+  {% assign pages_list = site.pages | where: "lang",page.lang%}
   {% for node in pages_list %}
     {% if node.title != null %}
       {% if node.layout == "page" %}
