@@ -50,14 +50,11 @@
   en: en/index.html
   cn: cn/index.html
 -
-  en: en/page/1/index.html
-  cn: cn/page/1/index.html
--
-  en: en/page/2/index.html
-  cn: cn/page/2/index.html
--
   en: en/committee.md
   cn: cn/committee.md
 -
   en: en/contact.md
   cn: cn/contact.md
+-
+  en: en/page/2/index.html
+  cn: cn/page/2/index.html
