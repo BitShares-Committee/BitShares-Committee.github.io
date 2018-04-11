@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Discussion] | Blockchain Fees Update Schedule & USD values"
+redirect_from: "/2018/03/16/Fees-update-schedule/"
 ---
 
 Hello,

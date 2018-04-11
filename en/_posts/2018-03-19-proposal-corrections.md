@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Correction]|Proposal IDs updated"
+redirect_from: "/2018/03/19/proposal-corrections/"
 ---
 
 Hello everyone,

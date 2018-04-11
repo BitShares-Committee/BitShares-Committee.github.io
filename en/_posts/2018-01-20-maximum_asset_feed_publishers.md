@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Proposal]|Increase maximum_asset_feed_publishers from 10 to 25"
+redirect_from: "/2018/01/20/maximum_asset_feed_publishers/"
 ---
 
 There has been a proposal created to increase maximum_asset_feed_publishers from 10 to 25.

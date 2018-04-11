@@ -26,11 +26,11 @@
 
 {% assign last_pag = pages_count %}
 
-{% if OFFSET >= posts_count then %}
+{% if OFFSET >= posts_count  %}
    {% assign last_pag = page.index %}
 {% endif %}
 
-{% if page.index == last_pag then %}
+{% if page.index == last_pag  %}
       {% assign next_pag = 'none' %}
 {% endif %}
 
@@ -67,7 +67,7 @@ Page: {{page.index}}
         <a class="page-link" href="page{{ paginator.previous_page }}">Newer</a>
       </li>//-->
       {% endif %}    
-      {% if page.index == last_pag then %}
+      {% if page.index == last_pag  %}
 
       {% else %}
       

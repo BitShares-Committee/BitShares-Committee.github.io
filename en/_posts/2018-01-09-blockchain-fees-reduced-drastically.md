@@ -1,6 +1,7 @@
 ---
 title: "[Update]|Blockchain Fees reduced drastically"
 layout: post
+redirect_from: "/2018/01/09/blockchain-fees-reduced-drastically/"
 ---
 
 As of Tuesday, January 9th 2018, the transaction fees on BitShares have

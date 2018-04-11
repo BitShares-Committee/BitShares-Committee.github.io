@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Proposal]|Introducing 0.1% trade fee on BitCNY & bitUSD"
+redirect_from: "/2018/03/09/bitXXX-Market-Fees-Proposal/"
 ---
 
 Hello everyone,

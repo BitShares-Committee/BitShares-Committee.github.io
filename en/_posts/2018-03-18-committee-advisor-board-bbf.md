@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Announcement]|BitShares Commitee becomes Advisory Board to the BBF"
+redirect_from: "/2018/03/18/committee-advisor-board-bbf/"
 ---
 
 Hello to the BitShares community,

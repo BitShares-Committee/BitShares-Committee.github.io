@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Proposal]|Increase blockchain fees"
+redirect_from: "/2018/03/15/Update-blockchain-fees/"
 ---
 
 A new proposal to bring blockchain fees in line with the agreed-upon USD prices due to changes in BTS valuation.

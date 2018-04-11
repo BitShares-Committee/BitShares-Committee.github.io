@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Discussion]|Committee-controlled open market operations"
+redirect_from: "/2018/03/13/open-market-operations/"
 ---
 
 Hello everyone,

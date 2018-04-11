@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Update]|Blockchain fees increased"
+redirect_from: "/2018/03/17/blockchain-fees-increased/"
 --- 
 
 As of Saturday, March 17th 2018, the transaction fees on BitShares have

@@ -27,7 +27,8 @@ t:
     title:            BitShares CommitteeCN
     tagline:          'BitShares Committee SiteCN'
     description:      'News, proposals, suggestions & notifications from the BitShares Committee.CN'
-
+plugins:
+  - jekyll-redirect-from
 # Custom vars
 version:          2.1.0
 defaults:

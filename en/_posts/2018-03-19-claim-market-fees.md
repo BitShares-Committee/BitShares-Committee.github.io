@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Proposal]|Claim market fees from bitCNY"
+redirect_from: "/2018/03/19/claim-market-fees/"
 ---
 
 A new Committee proposal to claim the 80,000 bitCNY in fees has been created.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Proposal]|Use committee-account funds to test open-market mechanics"
+redirect_from: "/2018/03/19/open-market-mechanics-test/"
 ---
 
 Hello everyone,

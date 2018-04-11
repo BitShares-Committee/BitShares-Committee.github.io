@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Announcement]|committee.bitshares.works launched"
+redirect_from: "/2018/03/18/launch-of-committee-website/"
 ---
 
 Hello everyone,

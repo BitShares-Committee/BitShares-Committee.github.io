@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Announcement]|Bitshares Blockchain Foundation launches BitShares' Public Presentation plan"
+redirect_from: "/2018/03/21/bbf-domain-worker-announcement/"
 ---
 
 Hello everyone,

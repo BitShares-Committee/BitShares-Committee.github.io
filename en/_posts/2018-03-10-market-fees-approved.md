@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Update]|0.1% bitUSD/bitCNY market fee approved"
+redirect_from: "/2018/03/10/market-fees-approved/"
 ---
 
 Hello everyone,

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Proposal]|Proposal to create worker for open market operation fund"
+redirect_from: "/2018/03/19/worker-open-market/"
 ---
 
 Hello everyone,

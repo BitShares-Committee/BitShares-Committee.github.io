@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[Discussion]|Market value management through bitUSD/bitCNY market fees"
+redirect_from: "/2018/03/08/market-value-management/"
 ---
 
 Hello everyone,
