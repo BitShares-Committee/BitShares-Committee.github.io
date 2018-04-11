@@ -1,7 +1,7 @@
 ---
  layout: default 
  title: Home
- lang: en
+ lang: cn
 ---
 
 {% if paginator.page == 1 %}
@@ -29,6 +29,11 @@
 {% else %}
 <h3>Updates</h3>
 {% endif %}
+{% assign filtered_posts = site.posts | where: 'lang',page.lang %}
+
+{% for post in filtered_posts limit:site.mpaginate %}
+   {{post.title}}
+{% endfor %}
 {% for post in paginator.posts %}
 <h4 class="post-title">
   <a href="{{ post.url }}"> 

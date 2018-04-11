@@ -17,9 +17,44 @@ author:
   url:            https://github.com/bitshares-commitee
 
 paginate:         10
+t:
+  en:
+    title:            BitShares Committee
+    tagline:          'BitShares Committee Site'
+    description:      'News, proposals, suggestions & notifications from the BitShares Committee.'
+  cn:
+    title:            BitShares CommitteeCN
+    tagline:          'BitShares Committee SiteCN'
+    description:      'News, proposals, suggestions & notifications from the BitShares Committee.CN'
 
 # Custom vars
 version:          2.1.0
-
+defaults:
+  #languages
+  -
+    scope:
+      path: "en"
+    values:
+      lang: "en"
+      layout: default
+  -
+    scope:
+      path: "cn"
+    values:
+      lang: "cn"
+      layout: default
+  -
+    scope:
+      path: "en/page"
+    values:
+      lang: "en"
+      layout: default
+  -
+    scope:
+      path: "cn"/page
+    values:
+      lang: "cn"
+      layout: default
+  
 github:
   repo:           https://github.com/bitshares-committee/bitshares-committee.github.io
