@@ -24,9 +24,9 @@ t:
     tagline:          'BitShares Committee Site'
     description:      'News, proposals, suggestions & notifications from the BitShares Committee.'
   cn:
-    title:            BitShares CommitteeCN
-    tagline:          'BitShares Committee SiteCN'
-    description:      'News, proposals, suggestions & notifications from the BitShares Committee.CN'
+    title:            BitShares Committee
+    tagline:          'BitShares Committee Site'
+    description:      'News, proposals, suggestions & notifications from the BitShares Committee.'
 plugins:
   - jekyll-redirect-from
 # Custom vars
