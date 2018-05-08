@@ -10,7 +10,7 @@ The following is an update regarding committee actions over the last month and a
 As fas as the market operations budget is concerned, the accounting is as follows:
 
 **Funding:**  
-2,000,000 BTS *from commitee reserves.*  
+2,000,000 BTS *from committee reserves.*  
 5,618,000 BTS *from the "committee controlled open market operation fund" worker.*  
 67,700 bitUSD *from the bitUSD market fees.*  
 1,314,000 bitCNY *from the bitCNY market fees.*  
@@ -26,4 +26,4 @@ At first glance, the operations appear to have had a positive effect on the mark
 
 A more thorough review will be made available once some more time passes since one month is not a large enough sample.
 
-In other news, the first Graphene DevCon was succesfully concluded in Sahnghai over the last weekend. Commitee member jademont has [published a relevant article](https://steemit.com/graphene/@jademont/global-graphene-blockchain-devcon-is-successfully-concluded).
+In other news, the first Graphene DevCon was succesfully concluded in Shanghai over the last weekend. Committee member jademont has [published a relevant article](https://steemit.com/graphene/@jademont/global-graphene-blockchain-devcon-is-successfully-concluded).
