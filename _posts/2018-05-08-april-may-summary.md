@@ -7,7 +7,7 @@ Hello everyone,
 
 The following is an update regarding committee actions over the last month and a half or so.
 
-As fas as the market operations budget is concerned, the accounting is as follows:
+As far as the market operations budget is concerned, the accounting is as follows:
 
 **Funding:**  
 2,000,000 BTS *from committee reserves.*  
@@ -26,4 +26,4 @@ At first glance, the operations appear to have had a positive effect on the mark
 
 A more thorough review will be made available once some more time passes since one month is not a large enough sample.
 
-In other news, the first Graphene DevCon was succesfully concluded in Shanghai over the last weekend. Committee member jademont has [published a relevant article](https://steemit.com/graphene/@jademont/global-graphene-blockchain-devcon-is-successfully-concluded).
+In other news, the first Graphene DevCon was successfully concluded in Shanghai over the last weekend. Committee member jademont has [published a relevant article](https://steemit.com/graphene/@jademont/global-graphene-blockchain-devcon-is-successfully-concluded).
