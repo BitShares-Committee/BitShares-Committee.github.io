@@ -40,6 +40,8 @@
     });
     var committee_members = {};
     var active = [];
+    var app;
+    var beetConn;
     function buildVotingList() {
       for (var i in committee_members) {
         var member=committee_members[i];
@@ -47,12 +49,28 @@
         if (active.indexOf(member.details.id)>=0) {
           activeclass="isActive";
         }
-        var memberel = $('<div class="member '+activeclass+'"><div><strong>Name:</strong> '+member.committee_name+'</div><div><strong>ID:</strong> '+member.details.id+'</div><div><strong>Info URL:</strong> <a href="'+member.details.url+'" target="_blank">Visit!</a></div><div><strong>Total Votes:</strong> '+Math.ceil(Number(member.details.total_votes/100000)).toLocaleString()+'</div><div><a href="javascriptVoid(0)" onclick="voteFor(\''+member.details.vote_id+'\');">Vote for '+member.committee_name+'.</a></div></div>');
+        var memberel = $('<div class="member '+activeclass+'"><div><strong>Name:</strong> '+member.committee_name+'</div><div><strong>ID:</strong> '+member.details.id+'</div><div><strong>Info URL:</strong> <a href="'+member.details.url+'" target="_blank">Visit!</a></div><div><strong>Total Votes:</strong> '+Math.ceil(Number(member.details.total_votes/100000)).toLocaleString()+'</div><div id="vote_'+member.committee_name+'" class="voteActions" data-voteid="'+member.details.vote_id+'" data-member="'+member.committee_name+'"><a href="javascript:void(0)" onclick="connectTobeet();" class="voteBtn">Connect to Beet</a></div></div>');
         $('#votingTable').append(memberel);
       }
     }
-    $(document).ready(function () {
-      if ($('#votingTable').length > 0) {
+    async function connectToBeet() {
+      beetConn = await app.getChainConnection("BTS",true);
+      if (beetConn.linked) {
+        $('.voteActions').each(
+          function(index,el) {
+            $(el).empty();
+            $(el).append($('<a href="javascript:void(0)" onclick="voteFor(\''+$(el).data('voteid')+'\');" class="voteBtn">Vote for '+$(el).data('member')+'</a>'));
+          }
+        )
+      }
+    }
+    async function votefor(voteid) {
+      var result=await beetConn.voteFor({id: voteid});
+      console.log(result);
+    }
+    $(document).ready(async function () {
+      app = await beet.getApp("BitShares Committee Voting");
+      if ($('#votingTable').length > 0) {        
         bitshares_js.bitshares_ws.Apis.instance("wss://bts-seoul.clockwork.gr", true)
           .init_promise.then(function (res) {
             bitshares_js.bitshares_ws.Apis.instance().db_api().exec("get_global_properties", []).then(function (
