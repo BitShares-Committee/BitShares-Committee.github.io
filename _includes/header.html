@@ -68,8 +68,9 @@
       var result=await beetConn.voteFor({id: voteid});
       console.log(result);
     }
-    $(document).ready(async function () {
-      app = await beet.getApp("BitShares Committee Voting");
+    $(document).ready( function () {
+      beet.getApp("BitShares Committee Voting").then ( function (res) {
+        app=res;
       if ($('#votingTable').length > 0) {        
         bitshares_js.bitshares_ws.Apis.instance("wss://bts-seoul.clockwork.gr", true)
           .init_promise.then(function (res) {
@@ -109,6 +110,7 @@
             });
           });
       }
+      });
     });
   </script>
 </head>
