@@ -47,7 +47,7 @@
         if (active.indexOf(member.details.id)>=0) {
           activeclass="isActive";
         }
-        var memberel = $('<div class="member '+activeclass+'"><div><strong>Name:</strong> '+member.committee_name+'</div><div><strong>ID:</strong> '+member.details.id+'</div><div><strong>Info URL:</strong> <a href="'+member.details.url+'" target="_blank">Visit!</a></div><div><strong>Total Votes:</strong> '+member.details.total_votes+'</div><div><a href="javascriptVoid(0)" onclick="voteFor(\''+member.details.vote_id+'\');">Vote for '+member.committee_name+'.</a></div></div>');
+        var memberel = $('<div class="member '+activeclass+'"><div><strong>Name:</strong> '+member.committee_name+'</div><div><strong>ID:</strong> '+member.details.id+'</div><div><strong>Info URL:</strong> <a href="'+member.details.url+'" target="_blank">Visit!</a></div><div><strong>Total Votes:</strong> '+Math.ceil(Number(member.details.total_votes/10000)).toLocaleString()+'</div><div><a href="javascriptVoid(0)" onclick="voteFor(\''+member.details.vote_id+'\');">Vote for '+member.committee_name+'.</a></div></div>');
         $('#votingTable').append(memberel);
       }
     }

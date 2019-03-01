@@ -240,10 +240,11 @@ html {
                         justify-content: center;
                         &.isActive {
                             border: 1px solid #999999;
+                            background: #bfffca;
                         }
                         float:left;
-                        margin-right:1.9rem;
-                        margin-bottom:1.9rem;
+                        margin-right:0.6rem;
+                        margin-bottom:0.6rem;
                     }
                 }
             }
