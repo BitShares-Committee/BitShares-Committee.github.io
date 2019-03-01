@@ -231,14 +231,14 @@ html {
                 #votingTable {
                     .member {
                         width: 18rem;
-                        height:18rem;
+                        height:10rem;
                         text-align:center;
                         border: 1px solid #cccccc;
                         border-radius:8px;
                         display:flex;
                         flex-direction: column;
                         justify-content: center;
-                        &.active {
+                        &.isActive {
                             border: 1px solid #999999;
                         }
                         float:left;
