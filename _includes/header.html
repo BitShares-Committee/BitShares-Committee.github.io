@@ -49,7 +49,7 @@
         if (active.indexOf(member.details.id)>=0) {
           activeclass="isActive";
         }
-        var memberel = $('<div class="member '+activeclass+'"><div><strong>Name:</strong> '+member.committee_name+'</div><div><strong>ID:</strong> '+member.details.id+'</div><div><strong>Info URL:</strong> <a href="'+member.details.url+'" target="_blank">Visit!</a></div><div><strong>Total Votes:</strong> '+Math.ceil(Number(member.details.total_votes/100000)).toLocaleString()+'</div><div id="vote_'+member.committee_name+'" class="voteActions" data-voteid="'+member.details.vote_id+'" data-member="'+member.committee_name+'"><a href="javascript:void(0)" onclick="connectToBeet();" class="voteBtn">Connect to Beet</a></div></div>');
+        var memberel = $('<div class="member '+activeclass+'"><div><strong>Name:</strong> '+member.committee_name+'</div><div><strong>ID:</strong> '+member.details.id+'</div><div><strong>Info URL:</strong> <a href="'+member.details.url+'" target="_blank">Visit!</a></div><div><strong>Total Votes:</strong> '+Math.ceil(Number(member.details.total_votes/100000)).toLocaleString()+'</div><div id="vote_'+member.committee_name+'" class="voteActions" data-voteid="'+member.details.id+'" data-member="'+member.committee_name+'"><a href="javascript:void(0)" onclick="connectToBeet();" class="voteBtn">Connect to Beet</a></div></div>');
         $('#votingTable').append(memberel);
       }
     }
