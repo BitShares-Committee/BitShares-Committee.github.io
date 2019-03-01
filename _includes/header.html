@@ -35,11 +35,24 @@
         appId: "258fb483-331f-497f-9016-6f2aa951f549",
       });
     });
-    
+    var committee_members={};
     bitshares_js.bitshares_ws.Apis.instance("wss://bts-seoul.clockwork.gr", true)
     .init_promise.then(function(res) {
       bitshares_js.bitshares_ws.Apis.instance().db_api().exec("lookup_committee_member_accounts", ["",1000]).then(function(committee) {
-        console.log(committee);
+        var objects=[];
+        for (var i in committee) {
+          var member=committee[i];
+          if (Number(member[1].replace("1.5.",""))<=10) {
+            continue;
+          }
+          committee_members[member[0]]={};
+          committee_members[member[0]].committeeId=member[1];
+          objects.push(member[1]);
+        }
+        
+        bitshares_js.bitshares_ws.Apis.instance().db_api().exec("get_objects", [objects]).then(function(commData) {
+          console.log(commData);
+        })
     });
     });
   </script>
