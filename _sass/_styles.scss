@@ -228,6 +228,20 @@ html {
                 table tr td :last-child {
                     margin-bottom: 0;
                 }
+                #votingTable {
+                    .member {
+                        width: 320px;
+                        height:320px;
+                        text-align:center;
+                        border: 1px solid #cccccc;
+                        border-radius:8px;
+                        &.active {
+                            border: 1px solid #999999;
+                        }
+                        float:left;
+                        margin-right:30px;
+                    }
+                }
             }
         }
     }
