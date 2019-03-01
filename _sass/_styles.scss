@@ -230,16 +230,20 @@ html {
                 }
                 #votingTable {
                     .member {
-                        width: 320px;
-                        height:320px;
+                        width: 18rem;
+                        height:18rem;
                         text-align:center;
                         border: 1px solid #cccccc;
                         border-radius:8px;
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
                         &.active {
                             border: 1px solid #999999;
                         }
                         float:left;
-                        margin-right:30px;
+                        margin-right:1.9rem;
+                        margin-bottom:1.9rem;
                     }
                 }
             }
