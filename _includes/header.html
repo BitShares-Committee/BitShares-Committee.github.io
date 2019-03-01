@@ -26,12 +26,20 @@
   <link rel="shortcut icon" href="/img/favicon.ico?v2">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script src="/js/bitsharesjs.js"></script>
+  <script src="/js/beet-js.js"></script>
   <script>
     var OneSignal = window.OneSignal || [];
     OneSignal.push(function () {
       OneSignal.init({
         appId: "258fb483-331f-497f-9016-6f2aa951f549",
       });
+    });
+    
+    Apis.instance("wss://node.testnet.bitshares.eu", true)
+    .init_promise.then(function(res) {
+      Apis.instance().db_api().exec("lookup_witness_accounts", ["",1000]).then(function(witnesses) {
+        console.log(witnesses);
     });
   </script>
 </head>
