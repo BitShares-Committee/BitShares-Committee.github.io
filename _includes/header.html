@@ -4,7 +4,8 @@
   <meta name="description" content="{{ site.title }} - {{ site.tagline }}">
   <meta name="author" content="{{ site.author.name }}">
   <title>
-    {% if page.title == "Home" %} {{ site.title }} &middot; {{ site.tagline }} {% else %} {{ page.title }} &middot; {{ site.title
+    {% if page.title == "Home" %} {{ site.title }} &middot; {{ site.tagline }} {% else %} {{ page.title }} &middot; {{
+    site.title
     }} {% endif %}
   </title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -26,6 +27,8 @@
   <link rel="shortcut icon" href="/img/favicon.ico?v2">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
   <script src="/js/bitsharesjs.js"></script>
   <script src="/js/beet-js.js"></script>
   <script>
@@ -35,37 +38,51 @@
         appId: "258fb483-331f-497f-9016-6f2aa951f549",
       });
     });
-    var committee_members={};
-    bitshares_js.bitshares_ws.Apis.instance("wss://bts-seoul.clockwork.gr", true)
-    .init_promise.then(function(res) {
-      bitshares_js.bitshares_ws.Apis.instance().db_api().exec("get_global_properties", []).then(function(props) {
-        console.log(props);
-      bitshares_js.bitshares_ws.Apis.instance().db_api().exec("lookup_committee_member_accounts", ["",1000]).then(function(committee) {
-        var objects=[];
-        for (var i in committee) {
-          var member=committee[i];
-          if (Number(member[1].replace("1.5.",""))<=10) {
-            continue;
-          }
-          committee_members[member[1]]={};
-          committee_members[member[1]].committee_name=member[0];
-          objects.push(member[1]);
-        }
-        
-        bitshares_js.bitshares_ws.Apis.instance().db_api().exec("get_objects", [objects]).then(function(commData) {
-          for (var i in commData) {
-            committee_members[commData[i].id].details=commData[i];
-          }
-          var temp=[];
-          temp=Object.values(committee_members);
-          committee_members=temp;
-          committee_members.sort(function(a, b) {
-            return Number(b.details.total_votes) - Number(a.details.total_votes);
+    var committee_members = {};
+    var active = [];
+    function buildVotingList() {
+      
+    }
+    $(document).ready(function () {
+      if ($('#votingTable').length > 0) {
+        bitshares_js.bitshares_ws.Apis.instance("wss://bts-seoul.clockwork.gr", true)
+          .init_promise.then(function (res) {
+            bitshares_js.bitshares_ws.Apis.instance().db_api().exec("get_global_properties", []).then(function (
+              props) {
+              active = props.active_committee_members;
+              bitshares_js.bitshares_ws.Apis.instance().db_api().exec("lookup_committee_member_accounts", ["",
+                  1000
+                ])
+                .then(function (committee) {
+                  var objects = [];
+                  for (var i in committee) {
+                    var member = committee[i];
+                    if (Number(member[1].replace("1.5.", "")) <= 10) {
+                      continue;
+                    }
+                    committee_members[member[1]] = {};
+                    committee_members[member[1]].committee_name = member[0];
+                    objects.push(member[1]);
+                  }
+
+                  bitshares_js.bitshares_ws.Apis.instance().db_api().exec("get_objects", [objects]).then(
+                    function (
+                      commData) {
+                      for (var i in commData) {
+                        committee_members[commData[i].id].details = commData[i];
+                      }
+                      var temp = [];
+                      temp = Object.values(committee_members);
+                      committee_members = temp;
+                      committee_members.sort(function (a, b) {
+                        return Number(b.details.total_votes) - Number(a.details.total_votes);
+                      });
+                      buildVotingList();
+                    });
+                });
+            });
           });
-          console.log(committee_members);
-        });
-      });
-    });
+      }
     });
   </script>
 </head>
