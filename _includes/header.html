@@ -36,9 +36,9 @@
       });
     });
     
-    Apis.instance("wss://node.testnet.bitshares.eu", true)
+    bitshares_js.bitshares_ws.Apis.instance("wss://node.testnet.bitshares.eu", true)
     .init_promise.then(function(res) {
-      Apis.instance().db_api().exec("lookup_witness_accounts", ["",1000]).then(function(witnesses) {
+      bitshares_js.bitshares_ws.Apis.instance().db_api().exec("lookup_witness_accounts", ["",1000]).then(function(witnesses) {
         console.log(witnesses);
     });
     });
