@@ -58,7 +58,7 @@
           temp=Object.values(committee_members);
           committee_members=temp;
           committee_members.sort(function(a, b) {
-            return Number(b.data.total_votes) - Number(a.data.total_votes);
+            return Number(b.details.total_votes) - Number(a.details.total_votes);
           });
           console.log(committee_members);
         })
