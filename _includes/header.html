@@ -45,13 +45,22 @@
           if (Number(member[1].replace("1.5.",""))<=10) {
             continue;
           }
-          committee_members[member[0]]={};
-          committee_members[member[0]].committeeId=member[1];
+          committee_members[member[1]]={};
+          committee_members[member[1]].committee_name=member[0];
           objects.push(member[1]);
         }
         
         bitshares_js.bitshares_ws.Apis.instance().db_api().exec("get_objects", [objects]).then(function(commData) {
-          console.log(commData);
+          for (var i in commData) {
+            committee_members[commData[i].id].details=commData[i];
+          }
+          var temp=[];
+          temp=Object.values(committee_members);
+          committee_members=temp;
+          committee_members.sort(function(a, b) {
+            return Number(b.data.total_votes) - Number(a.data.total_votes);
+          });
+          console.log(committee_members);
         })
     });
     });
