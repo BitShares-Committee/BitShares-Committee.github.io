@@ -38,6 +38,8 @@
     var committee_members={};
     bitshares_js.bitshares_ws.Apis.instance("wss://bts-seoul.clockwork.gr", true)
     .init_promise.then(function(res) {
+      bitshares_js.bitshares_ws.Apis.instance().db_api().exec("get_dynamic_global_properties", []).then(function(props) {
+        console.log(props);
       bitshares_js.bitshares_ws.Apis.instance().db_api().exec("lookup_committee_member_accounts", ["",1000]).then(function(committee) {
         var objects=[];
         for (var i in committee) {
@@ -61,7 +63,8 @@
             return Number(b.details.total_votes) - Number(a.details.total_votes);
           });
           console.log(committee_members);
-        })
+        });
+      });
     });
     });
   </script>
