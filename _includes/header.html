@@ -41,7 +41,15 @@
     var committee_members = {};
     var active = [];
     function buildVotingList() {
-      
+      for (var i in committee_members) {
+        var member=committee_members[i];
+        var activeclass="";
+        if (active.indexOf(member.details.id)>=0) {
+          activeclass="isActive";
+        }
+        var memberel = $('<div class="member '+activeclass+'"><strong>Name:</strong> '+member.committee_name+'<br/><strong>ID:</strong> '+member.details.id+'<br/><strong>Info URL:</strong> <a href="'+member.details.url+'" target="_blank">Visit!</a><br/><strong>Total Votes:</strong> '+member.details.total_votes+'<br/><a href="javascriptVoid(0)" onclick="voteFor(\''+member.details.vote_id+'\');">Vote for '+member.committee_name+'.</a><br/></div>');
+        $('#votingTable').append(memberel);
+      }
     }
     $(document).ready(function () {
       if ($('#votingTable').length > 0) {
