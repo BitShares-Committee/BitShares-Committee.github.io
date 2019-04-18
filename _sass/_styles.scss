@@ -240,7 +240,21 @@ html {
                         justify-content: center;
                         &.isActive {
                             border: 1px solid #999999;
-                            background: #bfffca;
+                            background: #9fdbf1;
+                        }
+                        .voteBtn {
+                            background-color: #094f79;
+                            font-weight: bold;
+                            display: inline-block;
+                            padding: 0.4rem 1rem;
+                            color: white;
+                            border-radius: 0.2rem;
+                            margin-top: 0.3rem;
+                            margin-bottom: 0.5rem;
+                            &:hover {
+                                text-decoration:none;
+                                background-color: #217db5;
+                            }
                         }
                         float:left;
                         margin-right:0.6rem;
